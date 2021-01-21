@@ -1,0 +1,40 @@
+1.	public class Main {
+    public static void main(String[] args) {
+        solution(11011101);
+        solution(-100);
+        solution(521455130);
+        solution(7451000);
+ 	}
+
+    static void solution(int N) {
+        int enablePrint = 0;
+        while (N > 0) {
+            enablePrint = enablePrint * 10;
+            enablePrint = enablePrint + N%10;
+            N = N/10;
+            }
+            {
+                System.out.print(enablePrint + "\n");
+            }
+        }
+}
+
+
+2.	class Solution {
+  		public static void main(String[] args);
+  		public int solution(String S) {
+   			 int n = S.length();
+    			 if (n % 2 == 1) {
+    				return 0;
+   			 }
+  			 int t = 0;
+    			 for (int i = 0; i < n; i++) {
+      				char s = S.charAt(i);
+    				t += s == '(' ? 1 : -1;
+     				if (t < 0) {
+        					return 0;
+      				}
+    			}
+    			return t == 0 ? 1 : 0;
+ 		 }
+}
